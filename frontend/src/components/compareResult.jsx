@@ -19,7 +19,7 @@ function CompareResult() {
     const fetchData = async () => {
       try {
         setLoadingMessage("Loading data... (Please wait)");
-        const response = await axios.get("http://localhost:8080/compareResult");
+        const response = await axios.get("https://comparison-1.onrender.com/compareResult");
         setParams(response.data.data);
       } catch (error) {
         console.error("Error fetching data:", error);

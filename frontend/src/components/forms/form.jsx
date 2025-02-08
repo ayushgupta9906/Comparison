@@ -25,7 +25,7 @@
 //     setError(null);
 
 //     try {
-//       const response = await axios.post("http://localhost:8080/", {
+//       const response = await axios.post("https://comparison-1.onrender.com/", {
 //         fac1: faculty1,
 //         en1: enroll1,
 //         fac2: faculty2,
@@ -166,7 +166,7 @@ function Form() {
     setError(null);
 
     try {
-      const response = await axios.post("http://localhost:8080/", {
+      const response = await axios.post("https://comparison-1.onrender.com/", {
         fac1: faculty1.toUpperCase(),
         en1: enroll1.toUpperCase(),
         fac2: faculty2.toUpperCase(),

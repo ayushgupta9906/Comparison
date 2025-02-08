@@ -1,6 +1,10 @@
 {
-    "functions": {
-      "src/index.js": { "runtime": "nodejs18.x" }
-    }
-  }
-  
+  "functions": {
+    "index.js": { "runtime": "nodejs18.x" },
+    "index.php": { "runtime": "vercel-php@0.5.0" }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" },
+    { "src": "/public/temp(.*)", "dest": "/index.php" }
+  ]
+}

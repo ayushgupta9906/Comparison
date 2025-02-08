@@ -8,16 +8,10 @@ import app from "./app.js";
 
 const port = process.env.PORT || 8080;
 
-
-// app.post("/", async (req, res) => {
-//     const { en, fac } = req.body;
-//     console.log(en, fac);
-//     enroll = en; // Semicolon added here to terminate the statement
-//     faculty = fac; // Semicolon added here to terminate the statement
-//     reqHTML(en, fac);
-//     res.send("hello world");
-// });
-
+// Route to display the port number
+app.get("/", (req, res) => {
+    res.send(`Server is running on port ${port}`);
+});
 
 dbConnect().then(()=>{
     app.listen(port,()=>{
@@ -26,6 +20,3 @@ dbConnect().then(()=>{
 }).catch((error)=>{
     console.log("MONGODB connection failed");
 })
-
-// Running the controller 
-
